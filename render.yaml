@@ -2,6 +2,5 @@ services:
   - type: web
     name: silosmart
     runtime: php
-    buildCommand: composer install --no-dev
     startCommand: php -S 0.0.0.0:$PORT
     plan: free
