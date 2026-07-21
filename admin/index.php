@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/functions.php';
+
 ss_session_start();
 require_login('/login.php');
 require_role(['super_admin', 'admin'], '/dashboard.php');
