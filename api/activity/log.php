@@ -3,10 +3,11 @@
 // SILOSMART - ACTIVITY LOG + CAMERA SNAPSHOT API
 // POST /api/activity/log.php
 // ============================================================
+require_once __DIR__ . '/../includes/functions.php';
+ss_session_start();
+
 header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); exit; }
-require_once dirname(__DIR__, 2) . '/includes/functions.php';
-ss_session_start();
 
 $data = json_decode(file_get_contents('php://input'), true) ?? [];
 
